@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/gql-apollo-note-manager/static/js/main.35a85a75.chunk.js",
-    "main.js.map": "/gql-apollo-note-manager/static/js/main.35a85a75.chunk.js.map",
+    "main.js": "/gql-apollo-note-manager/static/js/main.e49de052.chunk.js",
+    "main.js.map": "/gql-apollo-note-manager/static/js/main.e49de052.chunk.js.map",
     "runtime-main.js": "/gql-apollo-note-manager/static/js/runtime-main.0871bb83.js",
     "runtime-main.js.map": "/gql-apollo-note-manager/static/js/runtime-main.0871bb83.js.map",
     "static/js/2.ed6d126c.chunk.js": "/gql-apollo-note-manager/static/js/2.ed6d126c.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.0871bb83.js",
     "static/js/2.ed6d126c.chunk.js",
-    "static/js/main.35a85a75.chunk.js"
+    "static/js/main.e49de052.chunk.js"
   ]
 }
