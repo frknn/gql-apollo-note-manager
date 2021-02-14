@@ -1,41 +1,43 @@
-import React from 'react';
+import React from 'react'
 import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory
+} from "react-router-dom";
+import { Container } from '@chakra-ui/react'
+import { ColorModeSwitcher } from './ColorModeSwitcher'
+import BgIcons from './components/BgIcons'
+import Home from './components/Home';
+import PersonPage from './components/PersonPage';
+import AddPerson from './components/AddPerson';
+import AddNote from './components/AddNote';
 
-function App() {
+const App = () => {
+
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <>
+      <ColorModeSwitcher position="absolute" top={4} right={4} />
+      <BgIcons />
+      <Container maxW="3xl" h="100vh" textAlign="center" centerContent py={12} px={0}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/people/:id">
+              <PersonPage />
+            </Route>
+            <Route exact path="/add-person">
+              <AddPerson />
+            </Route>
+            <Route exact path="/add-note">
+              <AddNote />
+            </Route>
+          </Switch>
+        </Router>
+      </Container>
+    </>
   );
 }
 
